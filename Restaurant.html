@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billy Bob's Burgers & Subs</title>
+    <style>
+        /* Your existing styles */
+    </style>
+</head>
+<body>
+
+<h1>Billy Bob's Burgers & Subs</h1>
+<p>Food with attitude</p>
+
+<form action="/submit_order" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <h2>Order:</h2>
+
+    <label>Choose a Burger or Sub:</label><br>
+    <label for="burger">
+        <input type="radio" id="burger" name="order_type" value="burger" required>
+        Burger
+    </label>
+
+    <label for="sub">
+        <input type="radio" id="sub" name="order_type" value="sub" required>
+        Sub
+    </label><br>
+
+    <label>Customization:</label><br>
+    <label for="cheese">
+        <input type="checkbox" id="cheese" name="customization[]" value="cheese">
+        Extra Cheese
+    </label><br>
+
+    <label for="bacon">
+        <input type="checkbox" id="bacon" name="customization[]" value="bacon">
+        Bacon
+    </label><br>
+
+    <label for="sauce">Choose Sauce:</label>
+    <select id="sauce" name="sauce" required>
+        <option value="ketchup">Ketchup</option>
+        <option value="mayo">Mayo</option>
+        <option value="mustard">Mustard</option>
+    </select><br>
+
+    <label for="toppings">Choose Toppings:</label>
+    <select id="toppings" name="toppings[]" multiple>
+        <option value="lettuce">Lettuce</option>
+        <option value="tomato">Tomato</option>
+        <option value="onion">Onion</option>
+    </select><br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4"></textarea><br>
+
+    <label for="password">Create Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Submit Order</button>
+</form>
+
+</body>
+</html>
